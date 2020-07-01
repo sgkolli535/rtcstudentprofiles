@@ -1,0 +1,110 @@
+.App {
+  /*text-align: center;*/
+  height: 100vh;
+}
+
+.App-header {
+  background-color: black;
+  height: 180px;
+  color: white;
+  padding-top: 10px;
+  text-align: center;
+  /*border-bottom: 5px solid #0EA9CB;*/
+}
+
+.body {
+  margin-top: 50px;
+}
+hr {
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+}
+.date1 {
+  float: left;
+  font-size: 20px;
+  margin-left: 81px;
+}
+.date3 {
+  float: right;
+  font-size: 20px;
+  margin-right: 148px;
+}
+.date2 {
+  width: 200px;
+  margin-left: 647px;
+  font-size: 20px;
+  padding-top: 157px;
+  padding-bottom: 0;
+}
+.hs {
+  float: left;
+  margin-left: 100px;
+  margin-bottom: none;
+}
+.job {
+  float: right;
+  margin-right: 100px;
+}
+.college {
+  margin-left: 665px;
+
+  /*text-align: center;
+  width: 150px;*/
+}
+.interests1 {
+  float: left;
+  border: 5px solid #0EA9CB;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-left: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+}
+.interests2 {
+  float: right;
+  border: 5px solid #0EA9CB;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-right: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+}
+.pronouns {
+  float: left;
+  padding-left: 300px;
+}
+.based {
+  float: right;
+  padding-right: 300px;
+}
+.profile {
+  width: 260px;
+  height: 310px;
+  border: 5px solid #FFC700;
+}
+.vertical {
+  border-left: 2px solid black;
+  height: 40px;
+  margin-left: 30px;
+}
+li {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.clearfloat {
+  clear: both;
+}
+
+.Footer {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding-left: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 70px;
+}
+
