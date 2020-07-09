@@ -1,13 +1,17 @@
 import React from 'react';
 import logo from './white.jpg';
 import './App.css';
-import Button from 'react-bootstrap/Button'
+
+// load components
+import Tableau from "./components/Tableau";
+
 
 function App() {
   return (
     <div className="App">
+		<div><Tableau /></div>
+
       <header className="App-header">
-      	<Button variant="light">Edit</Button>
         <h1> Name </h1>
         <div className="pronouns">
         	<h2>Pronouns</h2>
@@ -20,6 +24,7 @@ function App() {
       <div className="body">
       <div className="interests1">
       	<h3>Tech Interests</h3>
+
       </div>
       <div className="interests2">
       	<h3>Other Interests</h3>
