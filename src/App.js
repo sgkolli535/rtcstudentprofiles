@@ -9,8 +9,7 @@ import Tableau from "./components/Tableau";
 function App() {
   return (
     <div className="App">
-		<div><Tableau /></div>
-
+		<Tableau></Tableau>
       <header className="App-header">
         <h1> Name </h1>
         <div className="pronouns">
