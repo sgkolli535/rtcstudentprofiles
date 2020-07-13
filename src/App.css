@@ -1,8 +1,44 @@
-.App {
+.profiles {
   /*text-align: center;*/
   height: 100vh;
 }
-
+.color-nav {
+  background-color: black;
+}
+.rtc {
+  width: 150px;
+}
+.homepage {
+  height: 70vh;
+  text-align: center;
+}
+.title {
+  margin-top: 100px;
+}
+#option1 {
+  float: left;
+  width: 300px;
+  height: 200px;
+  /*padding: 20px;*/
+}
+#option2 {
+  float: left;
+  width: 325px;
+  height: 200px;
+  margin-left: 47px;
+}
+#option3 {
+  float: right;
+  width: 300px;
+  height: 200px;
+}
+.options {
+  width: 1025px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 180px;
+  height: 200px;
+}
 .App-header {
   background-color: black;
   height: 180px;
@@ -11,7 +47,10 @@
   text-align: center;
   /*border-bottom: 5px solid #0EA9CB;*/
 }
-
+#search {
+  margin-left: 1100px;
+  margin-bottom: 15px;
+}
 .body {
   margin-top: 50px;
 }
@@ -48,6 +87,7 @@ hr {
 }
 .college {
   margin-left: 665px;
+  /*margin-bottom: 50px;*/
 
   /*text-align: center;
   width: 150px;*/
@@ -97,7 +137,9 @@ li {
 .clearfloat {
   clear: both;
 }
-
+#spacer {
+  height: 30px;
+}
 .Footer {
   background-color: black;
   color: white;
