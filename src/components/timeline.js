@@ -8,20 +8,20 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navigation from "./navigation.js";
 
 
-const Profile = ({name, image, hometown, highschool, highschoolcity, highschoolstate, college, collegecity, internships }) => (
-    // <div><Navigation /></div>
+const Profile = ({CityHS, College, CollegeCity, CollegeCountry, CollegeState, CountryHS, HighSchoolGraduationYear, HighSchoolName, SponsorshipNeeded, StateHS, UniqueID }) => (
+	// <div><Navigation /></div>
 		<div className="profiles">
       <header className="App-header">
       <Form inline id="search">
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-light">Light</Button>{' '}
+      <Button variant="outline-light">Search</Button>{' '}
       </Form>
-<h1> {name} </h1>
+<h1> {UniqueID} </h1>
         <div className="pronouns">
         	<h2>Pronouns</h2>
         </div>
         <div className="based">
-<h2>Based In {hometown}</h2>
+<h2>Based In {'hometown'}</h2>
         </div>
         <img src={logo} alt="profile" className="profile"></img>
       </header>
@@ -44,8 +44,8 @@ const Profile = ({name, image, hometown, highschool, highschoolcity, highschools
       	<div className="hs">
       		<h2>High School</h2>
       		<ul>
-<li>{highschoolcity}, {highschoolstate}</li>
-<li>{highschool}</li>
+<li>{'highschoolcity'}, {'highschoolstate'}</li>
+<li>{'highschool'}</li>
         	</ul>
         	<div className="vertical"></div>
       	</div>
@@ -64,8 +64,8 @@ const Profile = ({name, image, hometown, highschool, highschoolcity, highschools
       		<div className="vertical"></div>
         	<h2>College</h2>
         	<ul>
-<li>{collegecity}</li>
-        		<li>{college}</li>
+<li>{'collegecity'}</li>
+        		<li>{'college'}</li>
         	</ul>
         </div>
       </div>

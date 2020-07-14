@@ -11,9 +11,27 @@ import Home from "./components/Home";
 import Profile from "./components/timeline";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      profiles: [],
+    };
+  }
+  componentDidMount() {
+    fetch('https://api.airtable.com/v0/appxLvvasiLLy2QhX/Imported%20table?api_key=keyp8lCZ9q6Tu9USl')
+    .then((resp) => resp.json())
+    .then(data => {
+      console.log(data.records)
+       this.setState({ profiles: data.records });
+    }).catch(err => {
+      // Error :(
+    });
+  }
+
+  
   render() {
 
-    const profiles = [
+   /* const profiles = [
       {
         name: 'Lily Lou',
         image: './IMG_7078 2.jpg',
@@ -37,17 +55,20 @@ class App extends Component {
         internships: 'various places, rtc',
       },
     ];
-    const name = profiles[0].name;
-    
+     */
+    const {profiles} = this.state;
+   
   
   return (
     <div className="App">
       <Router>
         <Navigation />
         <Route exact path="/" component={ Home } />
-        <Route exact path="/1" render={(profiles) => <Profile {...profiles} name={name}/>} />
+        <Route exact path="/1" render={(profiles) => <Profile {...profiles} name={profiles}/>} />
       </Router>
       <div id="spacer"></div>
+
+      <div><p>{this.state.profiles.map(profiles => <Profile {...profiles.fields} key={profiles.fields.id} /> )}</p></div>
       <footer className="Footer"> © Rewriting the Code</footer>
     </div>
   );
