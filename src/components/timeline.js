@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navigation from "./navigation.js";
 
 
-const Profile = ({CityHS, College, CollegeCity, CollegeCountry, CollegeState, CountryHS, HighSchoolGraduationYear, HighSchoolName, SponsorshipNeeded, StateHS, UniqueID }) => (
+const Profile = ({CityHS, College, CollegeCity, CollegeCountry, CollegeState, CountryHS, HighSchoolGraduationYear, HighSchoolName, Hometown, PreviousInternship, PreCollegeCourses, SponsorshipNeeded, StateHS, UniqueID }) => (
 	// <div><Navigation /></div>
 		<div className="profiles">
       <header className="App-header">
@@ -21,7 +21,7 @@ const Profile = ({CityHS, College, CollegeCity, CollegeCountry, CollegeState, Co
         	<h2>Pronouns</h2>
         </div>
         <div className="based">
-<h2>Based In {'hometown'}</h2>
+			<h2>Based In {Hometown}</h2>
         </div>
         <img src={logo} alt="profile" className="profile"></img>
       </header>
@@ -34,7 +34,7 @@ const Profile = ({CityHS, College, CollegeCity, CollegeCountry, CollegeState, Co
       </div>
       <div className="clearfloat"></div>
       <div className="job">
-      		<h2>Job</h2>
+      		<h2>Internships: {PreviousInternship}</h2>
       		<ul>
         		<li>Location</li>
         		<li>Description</li>
@@ -42,10 +42,10 @@ const Profile = ({CityHS, College, CollegeCity, CollegeCountry, CollegeState, Co
         	<div className="vertical"></div>
       </div>
       	<div className="hs">
-      		<h2>High School</h2>
+<h2>High School: {HighSchoolName}</h2>
       		<ul>
-<li>{'highschoolcity'}, {'highschoolstate'}</li>
-<li>{'highschool'}</li>
+<li>{CityHS}, {StateHS}</li>
+<li>Courses: {PreCollegeCourses}</li>
         	</ul>
         	<div className="vertical"></div>
       	</div>
@@ -55,17 +55,17 @@ const Profile = ({CityHS, College, CollegeCity, CollegeCountry, CollegeState, Co
       	<div className="clearfloat"></div>
       	<hr></hr>
       	<div className="date1">
-      		<p>2010-2014</p>
+      		<p>{HighSchoolGraduationYear}</p>
       	</div>
       	<div className="date3">
       		<p>2018-Present</p>
       	</div>
       	<div className="college">
       		<div className="vertical"></div>
-        	<h2>College</h2>
+				<h2>College: {College}</h2>
         	<ul>
-<li>{'collegecity'}</li>
-        		<li>{'college'}</li>
+				<li>{CollegeCity}, {CollegeState}, {CollegeCountry}</li>
+        		<li>Description</li>
         	</ul>
         </div>
       </div>
