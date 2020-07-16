@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navigation from "./components/navigation";
 import Home from "./components/Home";
 import Profile from "./components/timeline";
+import Search from "./components/search";
+import Tableau from "./components/Tableau";
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +23,7 @@ class App extends Component {
     fetch('https://api.airtable.com/v0/appxLvvasiLLy2QhX/Imported%20table?api_key=keyp8lCZ9q6Tu9USl')
     .then((resp) => resp.json())
     .then(data => {
-      console.log(data.records)
+      //console.log(data.records)
        this.setState({ profiles: data.records });
     }).catch(err => {
       // Error :(
@@ -67,8 +69,9 @@ class App extends Component {
         <Route exact path="/1" render={(profiles) => <Profile {...profiles} name={profiles}/>} />
       </Router>
       <div id="spacer"></div>
-
+      <div><Tableau></Tableau></div>
       <div><p>{this.state.profiles.map(profiles => <Profile {...profiles.fields} key={profiles.fields.id} /> )}</p></div>
+      <Search></Search>
       <footer className="Footer"> © Rewriting the Code</footer>
     </div>
   );

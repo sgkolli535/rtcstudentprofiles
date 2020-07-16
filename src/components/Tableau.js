@@ -2,9 +2,7 @@ import React, {useRef, useEffect, Component } from "react";
 
 const { tableau } = window;
 
-class Tableau extends Component{
-    render() {
-
+function Tableau(){
     const ref = useRef(null);
     const url = "https://public.tableau.com/views/RTCHSData/Sheet1?:language=en&:display_count=y&:origin=viz_share_link";
 
@@ -23,5 +21,4 @@ class Tableau extends Component{
     );
 }
 
-}
 export default Tableau;
