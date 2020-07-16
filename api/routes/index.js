@@ -12,69 +12,105 @@ module.exports = router;
   This is the cleaning script. 
   I didn't know where to put it within the Express files, but it is in index for ease of running/checking.
   Let me know where it should be moved. :-)
-
-  Also, does the process.env file have to be in the same folder as the file where we need the api key?
 */
 require('dotenv').config();
-
+var Bottleneck = require("bottleneck")
 var Airtable = require('airtable');
 
-// something is wrong lolll
 var base = new Airtable({apiKey: 'process.env.REACT_APP_API_KEY'}).base('apph04l0UExzLb3mQ');
+const limiter = new Bottleneck({minTime: 1000/5}) // 5 requests per second
 
-// >> Get records from old table 
-base('HS').select({view: "Grid view"}).eachPage(function page(records, fetchNextPage) {
-  // This function ('page') will get called for each page of records.
-  var currentID;
-  var city;
-  var collegeCity;
+base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNextPage) {
+  // This function (`page`) will get called for each page of records.
+  var name, email, college, collegeCity, collegeState, collegeCountry, prevInternship, spons, hometown, 
+  hsName, hsGrad, cityHS, stateHS, countryHS, prevCourse;
+
   records.forEach(function(record) {
-    if(!(record.get('CityHS') === "") || !(record.get('CollegeCity') === "")){
-      if(record.get('CityHS') != 'Washington, D.C.'){
-        city = record.get('CityHS').split(',')[0]
-      }
-      else {
-        city = record.get('CityHS');
-      }
-      if(record.get('CollegeCity') != 'Washington, D.C.'){
-        collegeCity = record.get('CollegeCity').split(',')[0];
-      }
-      else {
-        collegeCity = record.get('CollegeCity');
-      }
-      currentID = record.id;
-     // console.log('CLEANING:', record.id, record.get('UniqueID')); // NOTE: trying to see how the code will grab the records
-      base('HS').update([
-        {
-          "id": currentID,
-          "fields": {
-            "CollegeCity": collegeCity,
-            "CityHS": city,
-          }
-        }
-      ], function(err, records) {
-        if (err) {
-          console.error(err);
-          return;
-        }
-        records.forEach(function(record) {
-          console.log(record.get('UniqueID'), 'is from', record.get('CityHS'), 'and goes to college in', record.get('CollegeCity'));
-        });
-      });
+    name = record.get('UniqueID').split('(')[0]; // only keep name
+    email = record.get('UniqueID').split('(')[1].split(')')[0];// remove parantheses
+    college = record.get('College');
+    collegeCity = record.get('CollegeCity');
+    collegeState = record.get('CollegeState');
+    collegeCountry = record.get('CollegeCountry');
+    prevInternship = record.get('Previous Internship (Members+Fellow App)');
+    spons = record.get('SponsorshipNeeded');
+    hometown = record.get('Hometown')
+    hsName = record.get('HighSchoolName');
+    hsGrad = record.get('HighSchoolGraduationYear');
+    cityHS = record.get('CityHS');
+    stateHS = record.get('StateHS');
+    countryHS = record.get('CountryHS');
+    prevCourse = record.get('PreCollegeCourses');
+
+    // clean city data 
+    if(cityHS == undefined){
+
     }
+    else if(cityHS !== undefined){
+      if(cityHS != 'Washington, D.C.'){
+        cityHS = cityHS.split(',')[0];
+      }
+      else if(cityHS == 'NYC'){
+        cityHS = 'New York';
+      }
+      else {
+        cityHS = cityHS;
+      }
+    }
+    if(collegeCity == undefined){
+
+    }
+    else if(collegeCity !== undefined){
+      if(collegeCity != 'Washington, D.C.'){
+        collegeCity = collegeCity.split(',')[0];
+      }
+      else if(collegeCity == 'NYC'){
+        collegeCity = 'New York City';
+      }
+      else {
+        collegeCity = collegeCity;
+      }
+    }
+
+    // create records in clean table
+  const limitedAirTableSiteCreate = limiter.wrap(base('Clean').create([
+      {
+        "fields": {
+          "Name": name,
+          "Email": email,
+          "College": college,
+          "CollegeCity": collegeCity,
+          "CollegeState": collegeState,
+          "CollegeCountry": collegeCountry,
+          "PrevIntern": prevInternship,
+          "Spons": spons,
+          "HSName": hsName,
+          "HSGrad": hsGrad,
+          "Hometown": hometown,
+          "CityHS": cityHS,
+          "StateHS": stateHS,
+          "CountryHS": countryHS,
+          "PreCollegeCourses": prevCourse
+        }
+      }
+    ], function(err, records) {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      records.forEach(function (record) {
+        console.log(record.getId());
+      });
+    }));
   });
 
-  // To fetch the next page of records, call `fetchNextPage`.
-  // If there are more records, `page` will get called again.
-  // If there are no more records, `done` will get called.
   fetchNextPage();
 
 }, function done(err) {
   if (err) { console.error(err); return; }
 });
-// >> End
 
-/* 
+/*
 1. pull all the Airtable records of fields CollegeCity and CityHS 
 2. go through each 
     2.1. if any have "," splice the string and only keep the stuff before the comma UNLESS its Washington, D.C.
