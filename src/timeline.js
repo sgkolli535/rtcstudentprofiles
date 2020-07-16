@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import logo from './white.jpg';
+import pic from './icon.png';
 import './App.css';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, Form, FormControl, Button } from 'react-bootstrap';
 import screen_shot from './screen_shot.png';
@@ -12,29 +12,21 @@ function Profile() {
     // <div><Navigation /></div>
 		<div className="profiles">
       <header className="App-header">
-      <Form inline id="search">
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-light">Light</Button>{' '}
-      </Form>
         <h1> Name </h1>
-        <div className="pronouns">
-        	<h2>Pronouns</h2>
+        <div className="email">
+        	<h2>Email:</h2>
+          <p>example@gmail.com</p>
         </div>
         <div className="based">
-        	<h2>Based In</h2>
+        	<h2>Based In: </h2>
+          <p>NC, U.S.</p>
         </div>
-        <img src={logo} alt="profile" className="profile"></img>
+        <img src={pic} alt="profile" className="profile"></img>
       </header>
       <div className="body">
-      <div className="interests1">
-        <h3>Tech Interests</h3>
-      </div>
-      <div className="interests2">
-        <h3>Other Interests</h3>
-      </div>
       <div className="clearfloat"></div>
       <div className="job">
-      		<h2>Job</h2>
+      		<h2>Experience</h2>
       		<ul>
         		<li>Location</li>
         		<li>Description</li>
@@ -74,3 +66,10 @@ function Profile() {
 }
 
 export default Profile;
+
+// <div className="interests1">
+//          <h3>Tech Interests</h3>
+//        </div>
+//       <div className="interests2">
+//         <h3>Other Interests</h3>
+//       </div>
