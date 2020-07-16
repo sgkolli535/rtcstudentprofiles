@@ -5,10 +5,11 @@ import { Navbar, NavItem, NavDropdown, MenuItem, Nav, Form, FormControl, Button 
 import screen_shot from './screen_shot.png';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navigation from "./navigation";
 import Home from "./Home";
 import Profile from "./timeline";
+import Directory from "./directory";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <Router>
         <Navigation />
         <Route exact path="/" component={ Home } />
-        <Route exact path="/1" component={Profile} />
+        <Route exact path="/1" component={ Directory } />
       </Router>
       <div id="spacer"></div>
       <footer className="Footer"> © Rewriting the Code</footer>
