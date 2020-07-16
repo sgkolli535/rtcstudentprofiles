@@ -10,14 +10,16 @@ import Profile from "./timeline";
 
 function Navigation() {
 	return (
-		<Navbar className="color-nav" variant="dark">
+		<Navbar collapseOnSelect expand="lg" className="color-nav" variant="dark">
           <Navbar.Brand><img src = { screen_shot } alt="rtc" className="rtc"></img></Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="links">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/1">Student Profiles</Nav.Link>
-            <Nav.Link href="/1">International Students</Nav.Link>
             <Nav.Link href="/1">Visualizations</Nav.Link>
           </Nav>
+          </Navbar.Collapse>
         </Navbar>
 		);
 }
