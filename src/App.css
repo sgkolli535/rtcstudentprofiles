@@ -5,6 +5,9 @@
 .color-nav {
   background-color: black;
 }
+.App-header {
+  border-bottom: 5px solid #0EA9CB;
+}
 .rtc {
   width: 150px;
 }
@@ -21,6 +24,11 @@
   height: 200px;
   /*padding: 20px;*/
 }
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 #option2 {
   float: left;
   width: 325px;
@@ -48,8 +56,11 @@
   /*border-bottom: 5px solid #0EA9CB;*/
 }
 #search {
-  margin-left: 1100px;
-  margin-bottom: 15px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 550px;
 }
 .body {
   margin-top: 50px;
@@ -92,7 +103,7 @@ hr {
   /*text-align: center;
   width: 150px;*/
 }
-.interests1 {
+/*.interests1 {
   float: left;
   border: 5px solid #0EA9CB;
   padding-left: 80px;
@@ -111,8 +122,8 @@ hr {
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 30px;
-}
-.pronouns {
+}*/
+.email {
   float: left;
   padding-left: 300px;
 }
@@ -122,7 +133,7 @@ hr {
 }
 .profile {
   width: 260px;
-  height: 310px;
+  height: 290px;
   border: 5px solid #FFC700;
 }
 .vertical {
@@ -140,6 +151,27 @@ li {
 #spacer {
   height: 30px;
 }
+#button {
+  margin-left: 15px;
+  width: 110px;
+}
+#bar {
+  width: 420px;
+}
+#directory {
+  padding-top: 150px;
+  text-align: center;
+  height: 75vh;
+}
+#directory h1 {
+  border: 1px solid black;
+  width: 510px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
 .Footer {
   background-color: black;
   color: white;
@@ -149,4 +181,3 @@ li {
   padding-bottom: 20px;
   margin-top: 70px;
 }
-
