@@ -17,7 +17,7 @@ require('dotenv').config();
 var Bottleneck = require("bottleneck")
 var Airtable = require('airtable');
 
-var base = new Airtable({apiKey: 'key3YJZ3I3imqpTX0'}).base('apph04l0UExzLb3mQ');
+var base = new Airtable({apiKey: 'process.env/REACT_APP_API_KEY'}).base('apph04l0UExzLb3mQ');
 const limiter = new Bottleneck({minTime: 1000/5}) // 5 requests per second
 
 base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNextPage) {
