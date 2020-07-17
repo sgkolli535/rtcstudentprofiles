@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
+
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
@@ -13,6 +14,7 @@ module.exports = router;
   I didn't know where to put it within the Express files, but it is in index for ease of running/checking.
   Let me know where it should be moved. :-)
 */
+
 require('dotenv').config();
 var Bottleneck = require("bottleneck")
 var Airtable = require('airtable');

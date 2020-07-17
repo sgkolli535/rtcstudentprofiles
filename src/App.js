@@ -11,7 +11,14 @@ import Home from "./Home";
 import Profile from "./timeline";
 import Directory from "./directory";
 
-function App() {
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      profiles: [],
+    };
+  }
+  render() {
   return (
     <div className="App">
       <Router>
@@ -24,5 +31,5 @@ function App() {
     </div>
   );
 }
-
+}
 export default App;
