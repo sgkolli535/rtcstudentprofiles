@@ -1,2 +1,4 @@
 /node_modules
-/process.env
+
+.DS_STORE
+.env
