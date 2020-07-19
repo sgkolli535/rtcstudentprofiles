@@ -24,7 +24,7 @@ const limiter = new Bottleneck({minTime: 1000/5}) // 5 requests per second
 
 base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNextPage) {
   // This function (`page`) will get called for each page of records.
-  var name, email, college, collegeCity, collegeState, collegeCountry, prevInternship, spons, hometown, 
+  var name, email, college, collegeCity, collegeState, collegeCountry, gradPd, prevInternship, spons, hometown, 
   hsName, hsGrad, cityHS, stateHS, countryHS, prevCourse;
 
   records.forEach(function(record) {
@@ -35,6 +35,7 @@ base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNex
     collegeCity = record.get('CollegeCity');
     collegeState = record.get('CollegeState');
     collegeCountry = record.get('CollegeCountry');
+    gradPd = record.get('GRADPERIOD')
     prevInternship = record.get('Previous Internship (Members+Fellow App)');
     spons = record.get('SponsorshipNeeded');
     hometown = record.get('Hometown')
@@ -85,6 +86,7 @@ base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNex
           "CollegeCity": collegeCity,
           "CollegeState": collegeState,
           "CollegeCountry": collegeCountry,
+          "GradPd": gradPd,
           "PrevIntern": prevInternship,
           "Spons": spons,
           "HSName": hsName,
