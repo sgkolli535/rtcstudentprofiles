@@ -54,8 +54,11 @@ base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNex
       if(cityHS != 'Washington, D.C.'){
         cityHS = cityHS.split(',')[0];
       }
-      else if(cityHS == 'NYC'){
+      else if(cityHS == 'NYC' || cityHS == 'NY'){
         cityHS = 'New York';
+      }
+      else if(cityHS == 'Urbana Champaign' || cityHS == 'Urbana-Champaign' || cityHS == 'Urbana & Champaign'){
+        cityHS = 'Urbana';
       }
       else {
         cityHS = cityHS;
@@ -68,8 +71,11 @@ base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNex
       if(collegeCity != 'Washington, D.C.'){
         collegeCity = collegeCity.split(',')[0];
       }
-      else if(collegeCity == 'NYC'){
-        collegeCity = 'New York City';
+      else if(collegeCity == 'NYC' || collegeCity == 'NY'){
+        collegeCity = 'New York';
+      }
+      else if(collegeCity == 'Urbana Champaign' || collegeCity == 'Urbana-Champaign' || collegeCity == 'Urbana & Champaign'){
+        collegeCity = 'Urbana';
       }
       else {
         collegeCity = collegeCity;
