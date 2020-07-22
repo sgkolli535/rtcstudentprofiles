@@ -16,8 +16,9 @@ function Navigation() {
           <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="links">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/1">Student Profiles</Nav.Link>
-            <Nav.Link href="/1">Visualizations</Nav.Link>
+            <Nav.Link href="/1">Search Members</Nav.Link>
+            <Nav.Link href="/1">Data Visualization</Nav.Link>
+
           </Nav>
           </Navbar.Collapse>
         </Navbar>

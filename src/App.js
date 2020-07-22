@@ -25,6 +25,7 @@ class App extends Component {
         <Navigation />
         <Route exact path="/" component={ Home } />
         <Route exact path="/1" component={ Directory } />
+        <Route exact path="/2" component={ Profile } />
       </Router>
       <div id="spacer"></div>
       <footer className="Footer"> © Rewriting the Code</footer>

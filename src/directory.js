@@ -6,20 +6,64 @@ import screen_shot from './screen_shot.png';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navigation from "./navigation.js";
-
+import Home from "./Home";
+import Profile from "./timeline";
 
 class Directory extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			rtcMembers: [], 
-			inputValue: '',
+			rtcMembers: [], // list of members
+			inputValue: '', // input in searchbar
+			updatedSearch: [], // updated list based on search	
 		};
-
+		this.memberFilterOnChange = this.memberFilterOnChange.bind(this);	
 	}
-	callAPI() {
+	handleClick() {
+		console.log("clicked");
+	}
+	memberFilterOnChange= (event) => {
+		this.setState({
+			inputValue: event.target.value
+		})
+		let oldList = this.state.rtcMembers.map(members => {
+			return {
+				name: members.name,
+				email: members.email,
+				college: members.college,
+				collegeCity: members.collegeCity,
+				collegeState: members.collegeState,
+				collegeCountry: members.collegeCountry,
+				gradPd: members.gradPd,
+				prevInternship: members.prevInternship,
+				spons: members.spons,
+				hometown: members.hometown,
+				hsName: members.hsName,
+				hsGrad: members.hsGrad,
+				cityHS: members.cityHS,
+				stateHS: members.stateHS,
+				countryHS: members.countryHS,
+				prevCourse: members.prevCourse,
+		  
+			};
+		});
+
+		if(event.target.value !== "") {
+			let newList = [];
+			newList = oldList.filter(members => members.name.toLowerCase().includes(event.target.value.toLowerCase()));
+			//newList = oldList.filter(members => this.ciEquals(this.state.inputValue, members.name));			
+			this.setState({
+				updatedSearch: newList
+			})
+		} else {
+			this.setState({
+				updatedSearch: [],
+			})
+		}
+	}
+callAPI() {
 		fetch("http://localhost:9000/testAPI")
-		.then(res => res.text())
+		.then(res => res.json())
 		.then(res => this.setState({ rtcMembers: res}));
 	}
 	componentWillMount() {
@@ -30,14 +74,16 @@ class Directory extends Component {
 	return(
 		<div id="directory">
 		<h1>Search for RTC Member Profiles</h1>
-		<p className="App-intro">{this.state.rtcMembers}</p>
-		<Form inline id="search">
-      		<FormControl type="text" placeholder="RTC Member" id="bar" size="lg" value={this.props.inputValue} onChange={this.props.memberFilterOnChange}/>
-      		<Button variant="outline-dark" size="lg" id="button">Search</Button>{' '}
+		<Form inline id="search" autocomplete="off">
+      		<FormControl type="text" placeholder="RTC Member" id="bar" size="lg" value={this.props.inputValue} onChange={(e) => this.memberFilterOnChange(e)}/>
+      		<Button onClick={() => this.handleClick()}variant="outline-dark" size="lg" id="button">Search</Button>{' '}
      	 </Form>
+			{this.state.updatedSearch.map(members => <p><a href="/2">{members.name}</a><br /> </p>)}
+
      	 </div>
 		);
 
 	}
+
 	}
 	export default Directory;	
