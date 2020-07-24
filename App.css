@@ -1,0 +1,300 @@
+.profiles {
+  /*text-align: center;*/
+  height: 110vh;
+}
+.color-nav {
+  background-color: black;
+}
+.App-header {
+  border-bottom: 5px solid #0EA9CB;
+}
+.App-header2 {
+  border-bottom: 5px solid #0EA9CB;
+  background-color: black;
+  color: white;
+}
+#based2 {
+  float: right;
+  margin-right: 20px;
+}
+#email2 {
+  margin-left: 20px;
+}
+#profile2 {
+  width: 250px;
+  height: 250px;
+  border: 5px solid #FFC700;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#hs2 {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+#college2 {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+#job2 {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+  margin-top: 20px;
+}
+.dates {
+  width: 150px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.rtc {
+  width: 150px;
+}
+.homepage {
+  height: 70vh;
+  text-align: center;
+}
+.title {
+  margin-top: 100px;
+}
+#smallh1 {
+  text-align: center;
+}
+#option1 {
+  float: left;
+  width: 300px;
+  height: 200px;
+  /*padding: 20px;*/
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+#body2 {
+  margin-top: 80px;
+}
+#option2 {
+  float: left;
+  width: 325px;
+  height: 200px;
+  margin-left: 47px;
+}
+#option3 {
+  float: right;
+  width: 300px;
+  height: 200px;
+}
+.options {
+  width: 1025px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 180px;
+  height: 200px;
+}
+#option21 {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+#option22 {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+#option23 {
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.App-header {
+  background-color: black;
+  height: 180px;
+  color: white;
+  padding-top: 10px;
+  text-align: center;
+  /*border-bottom: 5px solid #0EA9CB;*/
+}
+#search {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 550px;
+}
+.body {
+  margin-top: 50px;
+}
+hr {
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+}
+.date1 {
+  float: left;
+  font-size: 20px;
+  margin-left: 81px;
+}
+.date3 {
+  float: right;
+  font-size: 20px;
+  margin-right: 148px;
+}
+.date2 {
+  width: 200px;
+  margin-left: 647px;
+  font-size: 20px;
+  padding-top: 364px;
+  padding-bottom: 0;
+}
+.hs {
+  float: left;
+  margin-left: 100px;
+  margin-bottom: none;
+  margin-top: 125px;
+}
+.job {
+  float: right;
+  margin-top: 125px;
+  margin-right: 100px;
+}
+.college {
+  margin-left: 665px;
+
+  /*text-align: center;
+  width: 150px;*/
+}
+/*.interests1 {
+  float: left;
+  border: 5px solid #0EA9CB;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-left: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+}
+.interests2 {
+  float: right;
+  border: 5px solid #0EA9CB;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-right: 150px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 30px;
+}*/
+.email {
+  float: left;
+  padding-left: 300px;
+}
+.based {
+  float: right;
+  padding-right: 300px;
+}
+.profile {
+  width: 260px;
+  height: 290px;
+  border: 5px solid #FFC700;
+}
+.vertical {
+  border-left: 2px solid black;
+  height: 50px;
+  margin-left: 30px;
+}
+.vertical2 {
+  border-left: 2px solid black;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10px;
+}
+li {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.clearfloat {
+  clear: both;
+}
+#spacer {
+  height: 30px;
+}
+
+#button {
+  margin-left: 15px;
+  width: 110px;
+}
+#bar {
+  width: 420px;
+}
+#bar2 {
+  width: 450px;
+}
+#search2 {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+}
+#button2 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 110px;
+}
+#smallsearch {
+  border: 1px solid black;
+  width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+#directory {
+  padding-top: 150px;
+  text-align: center;
+  height: 75vh;
+}
+#directory h1 {
+  border: 1px solid black;
+  width: 510px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+#Footer {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding-left: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 100px;
+}
+#searching {
+  margin-bottom: 310px;
+}
+.Footer {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 80px;
+  text-align: center;
+}
+
