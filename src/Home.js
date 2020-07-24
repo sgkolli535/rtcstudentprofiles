@@ -17,7 +17,7 @@ function Home() {
           <div id="option1">
             <h2>Student Profiles</h2>
             <hr></hr>
-            <p>View the profiles of current RTC students, including theit high schools, colleges, and jobs</p>
+            <p>View the profiles of current RTC students, including their high schools, colleges, and jobs</p>
           </div>
           <div id="option2">
             <h2>International Students</h2>
