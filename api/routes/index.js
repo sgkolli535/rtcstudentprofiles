@@ -9,11 +9,7 @@ router.get('/', function(req, res, next) {
 
 module.exports = router;
 
-/*
-  This is the cleaning script. 
-  I didn't know where to put it within the Express files, but it is in index for ease of running/checking.
-  Let me know where it should be moved. :-)
-*/
+// This is the cleaning script. 
 
 require('dotenv').config();
 var Bottleneck = require("bottleneck")
@@ -24,6 +20,7 @@ const limiter = new Bottleneck({minTime: 1000/5}) // 5 requests per second
 
 base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNextPage) {
   // This function (`page`) will get called for each page of records.
+
   var name, email, college, collegeCity, collegeState, collegeCountry, gradPd, prevInternship, spons, hometown, 
   hsName, hsGrad, cityHS, stateHS, countryHS, prevCourse;
 
@@ -120,13 +117,3 @@ base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNex
 }, function done(err) {
   if (err) { console.error(err); return; }
 });
-
-/*
-1. pull all the Airtable records of fields CollegeCity and CityHS 
-2. go through each 
-    2.1. if any have "," splice the string and only keep the stuff before the comma UNLESS its Washington, D.C.
-    2.2. Change "Hts" to "Heights"
-    2.3. Change "NYC" to "New York"
-    2.4. If any have "/", splice string and delete everything before "/"
-3. Some unique cases to look at: Granville OH, cells with "(" or ")", South San Francisco
-*/
