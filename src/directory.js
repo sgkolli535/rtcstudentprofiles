@@ -77,7 +77,7 @@ callAPI() {
 		<Form inline id="search" autocomplete="off">
       		<FormControl type="text" placeholder="RTC Member" id="bar" size="lg" value={this.props.inputValue} onChange={(e) => this.memberFilterOnChange(e)}/>
       		<Button onClick={() => this.handleClick()}variant="outline-dark" size="lg" id="button">Search</Button>{' '}
-			{this.state.updatedSearch.map(members =><a href="/2"><FormControl disabled type="text" placeholder={members.name} id="bar" size="lg" value={members.name}/></a>
+			{this.state.updatedSearch.map(members =><Link to={`/profile/${members.name}`}><FormControl disabled type="text" placeholder={members.name} id="bar" size="lg" value={members.name}/></Link>
 )}
 		  </Form>
 

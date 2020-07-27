@@ -12,7 +12,7 @@ require('dotenv').config();
 var Bottleneck = require("bottleneck")
 var Airtable = require('airtable');
 
-var base = new Airtable({apiKey: process.env.REACT_APP_API_KEY}).base(process.env.REACT_APP_BASE); //   appxLvvasiLLy2QhX
+var base = new Airtable({apiKey: process.env.REACT_APP_API_KEY}).base(process.env.REACT_APP_BASE); 
 
 const limiter = new Bottleneck({minTime: 1000/5}); // 5 requests per second
 var students = [];
@@ -58,7 +58,6 @@ base('CLEAN').select({ view: "Grid view"}).eachPage(function page(records, fetch
       "countryHS": countryHS,
       "prevCourse": prevCourse,
     };
-
     students.push(student);
   });
 

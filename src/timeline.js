@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useEffect, useState } from 'react';
 import pic from './icon.png';
 import './App.css';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, Form, FormControl, Button } from 'react-bootstrap';
@@ -6,20 +6,44 @@ import screen_shot from './screen_shot.png';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navigation from "./navigation.js";
+//filterByFormula: '{ID} = "MyFunIDValue"'
 
-function Profile() {
+
+function Profile({ match }) {
+
+	useEffect(()=> {
+		fetchMember();
+		console.log(match);
+	}, []);
+
+	const [member, setMember] = useState({});
+
+	const fetchMember = async() => {
+		const fetchMember = await fetch("http://localhost:9000/testAPI");
+		const members = await fetchMember.json();
+
+		console.log(members);
+		console.log(match.params.name);
+		const member = members.find(x => x.name === match.params.name);
+		setMember(member);
+
+		//const fetchName = await fetch(`https://api.airtable.com/v0/apph04l0UExzLb3mQ/OLD%20HS?api_key=keyp8lCZ9q6Tu9USl`);
+		//console.log(this.state.rtcMembers);
+		console.log(member);
+		//console.log(fetchName);
+	};
 	return (
     // <div><Navigation /></div>
 		<div className="profiles">
       <header className="App-header">
-        <h1> Name </h1>
+        <h1> {member.name} </h1>
         <div className="email">
-        	<h2>Email:</h2>
-          <p>example@gmail.com</p>
+	<h2>Email:</h2>
+          <p>{member.email}</p>
         </div>
         <div className="based">
         	<h2>Based In: </h2>
-          <p>NC, U.S.</p>
+	<p>{member.stateHS}, {member.countryHS}</p>
         </div>
         <img src={pic} alt="profile" className="profile"></img>
       </header>
@@ -28,7 +52,6 @@ function Profile() {
       <div className="job">
       		<h2>Experience</h2>
       		<ul>
-        		<li>Location</li>
         		<li>Description</li>
         	</ul>
         	<div className="vertical"></div>
