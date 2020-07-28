@@ -2,28 +2,59 @@
     display: flex;
     justify-content: center;
     background-color: black;
-  
+    /* comment out after header is fixed  */
+    margin-top: 0px;
   } 
+
+  /* comment out after footer is fixed  */
+  .Footer{
+    margin-top: 0px;
+
+  }
   
   .screen{
-    width: 1196px;
-    height: 635px;  
-    background: #FFFFFF
+    width: 1500px;
+    height: 800px;  
+    background: #000000;
   
   }
   
-  .buttonbar{
+  .titlebar{
       background: #000000;
       height: 130px;
       width: 100vw;
       display: flex;
       justify-content: center;
-      justify-content: space-between;
+      /* justify-content: space-between; */
       align-content: center;
   
   }
+
+  /* style top text to be correct font, font-wight, color */
+  .text{
+    /* width: 144px; */
+    height: 37px;
+    /* font-family:'Segoe UI'; */
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    margin-top: 15px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
+  }
   
-  
+
+  /* comment out after footer is fixed */
+  #spacer {
+    height: 0px;
+}
+
+a{
+  color: dodgerblue;
+
+}
+
   .bluebutton{
     display: flex;
     justify-content: center;

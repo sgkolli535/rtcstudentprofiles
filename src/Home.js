@@ -14,21 +14,25 @@ function Home() {
         <h1 className="title">Discover RTC</h1>
         <p>A platform to explore the composition of RTC members</p>
         <div className="options">
+          <a href='/search'>
           <div id="option1">
             <h2>Student Profiles</h2>
             <hr></hr>
             <p>View the profiles of current RTC students, including their high schools, colleges, and jobs</p>
           </div>
-          <div id="option2">
+          </a>
+          {/* <div id="option2">
             <h2>International Students</h2>
             <hr></hr>
             <p>View the profiles of international students, including countries of origin, first-generation, universities, sponsorship, and jobs</p>
-          </div>
+          </div> */}
+          <a href='/visualization'>
           <div id="option3">
             <h2>Visualizations</h2>
             <hr></hr>
             <p>View visualizations of most popular high schools, high school and college states, and full-time locations</p>
           </div>
+          </a>
         </div>
       </div>
 		);
