@@ -34,7 +34,7 @@ class Directory extends Component {
 				collegeCity: members.collegeCity,
 				collegeState: members.collegeState,
 				collegeCountry: members.collegeCountry,
-				gradPd: members.gradPd,
+				collegeGrad: members.collegeGrad,
 				prevInternship: members.prevInternship,
 				spons: members.spons,
 				hometown: members.hometown,
