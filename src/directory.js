@@ -62,7 +62,7 @@ class Directory extends Component {
 		}
 	}
 callAPI() {
-		fetch("http://localhost:9000/testAPI")
+		fetch("http://localhost:9000/RTCmembers")
 		.then(res => res.json())
 		.then(res => this.setState({ rtcMembers: res}));
 	}

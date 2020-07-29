@@ -6,7 +6,6 @@ import screen_shot from './screen_shot.png';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navigation from "./navigation.js";
-//filterByFormula: '{ID} = "MyFunIDValue"'
 
 
 function Profile({ match }) {
@@ -19,15 +18,12 @@ function Profile({ match }) {
 	const [member, setMember] = useState({});
 
 	const fetchMember = async() => {
-		const fetchMember = await fetch("http://localhost:9000/testAPI");
+		const fetchMember = await fetch("http://localhost:9000/RTCmembers");
 		const members = await fetchMember.json();
 		const member = members.find(x => x.name === match.params.name);
 		setMember(member);
 
-		//const fetchName = await fetch(`https://api.airtable.com/v0/apph04l0UExzLb3mQ/OLD%20HS?api_key=keyp8lCZ9q6Tu9USl`);
-		//console.log(this.state.rtcMembers);
 		console.log(member);
-		//console.log(fetchName);
 	};
 	return (
     // <div><Navigation /></div>
