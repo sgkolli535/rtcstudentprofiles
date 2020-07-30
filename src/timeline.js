@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useEffect, useState } from 'react';
 import pic from './icon.png';
 import './App.css';
 import { Navbar, NavItem, NavDropdown, MenuItem, Nav, Form, FormControl, Button } from 'react-bootstrap';
@@ -7,19 +7,36 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navigation from "./navigation.js";
 
-function Profile() {
+
+function Profile({ match }) {
+
+	useEffect(()=> {
+		fetchMember();
+		console.log(match);
+	}, []);
+
+	const [member, setMember] = useState({});
+
+	const fetchMember = async() => {
+		const fetchMember = await fetch("http://localhost:9000/RTCmembers");
+		const members = await fetchMember.json();
+		const member = members.find(x => x.name === match.params.name);
+		setMember(member);
+
+		console.log(member);
+	};
 	return (
     // <div><Navigation /></div>
 		<div className="profiles">
       <header className="App-header">
-        <h1> Name </h1>
+        <h1> {member.name} </h1>
         <div className="email">
-        	<h2>Email:</h2>
-          <p>example@gmail.com</p>
+	<h2>Email:</h2>
+          <p>{member.email}</p>
         </div>
         <div className="based">
         	<h2>Based In: </h2>
-          <p>NC, U.S.</p>
+	<p>{member.hometown}</p>
         </div>
         <img src={pic} alt="profile" className="profile"></img>
       </header>
@@ -28,36 +45,37 @@ function Profile() {
       <div className="job">
       		<h2>Experience</h2>
       		<ul>
-        		<li>Location</li>
-        		<li>Description</li>
+	<li>{member.prevInternship}</li>
         	</ul>
         	<div className="vertical"></div>
       </div>
       	<div className="hs">
       		<h2>High School</h2>
       		<ul>
-        		<li>Location</li>
-        		<li>Description</li>
+        		<li>{member.hsName}</li>
+        		<li>{member.cityHS}, {member.stateHS}, {member.countryHS}</li>
+				<li>{member.prevCourse}</li>
+
         	</ul>
         	<div className="vertical"></div>
       	</div>
       	<div className="date2">
-      		<p>2014-2018</p>
+      		<p>{member.collegeGrad}</p>
       	</div>
       	<div className="clearfloat"></div>
       	<hr></hr>
       	<div className="date1">
-      		<p>2010-2014</p>
+      		<p>{member.hsGrad}</p>
       	</div>
       	<div className="date3">
-      		<p>2018-Present</p>
+      		<p>Various</p>
       	</div>
       	<div className="college">
       		<div className="vertical"></div>
         	<h2>College</h2>
         	<ul>
-        		<li>Location</li>
-        		<li>Description</li>
+			<li>{member.college}</li>
+			<li>{member.collegeCity}, {member.collegeState}, {member.collegeCountry}</li>
         	</ul>
         </div>
       </div>

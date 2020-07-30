@@ -26,7 +26,7 @@ class App extends Component {
         <Navigation />
         <Route exact path="/" component={ Home } />
         <Route exact path="/search" component={ Directory } />
-        <Route exact path="/profile" component={ Profile } />
+        <Route path="/profile/:name" component={Profile}/>
         <Route exact path="/visualization" component={Visualization} />
       </Router>
       <div id="spacer"></div>

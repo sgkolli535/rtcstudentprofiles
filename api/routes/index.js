@@ -32,7 +32,8 @@ base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNex
     collegeCity = record.get('CollegeCity');
     collegeState = record.get('CollegeState');
     collegeCountry = record.get('CollegeCountry');
-    gradPd = record.get('GRADPERIOD')
+    gradPd = record.get('GradPeriod')
+    gradYr = record.get('GradYear')
     prevInternship = record.get('Previous Internship (Members+Fellow App)');
     spons = record.get('SponsorshipNeeded');
     hometown = record.get('Hometown')
@@ -90,6 +91,7 @@ base('HS').select({ view: "Grid view"}).eachPage(function page(records, fetchNex
           "CollegeState": collegeState,
           "CollegeCountry": collegeCountry,
           "GradPd": gradPd,
+          "GradYear": gradYr,
           "PrevIntern": prevInternship,
           "Spons": spons,
           "HSName": hsName,
