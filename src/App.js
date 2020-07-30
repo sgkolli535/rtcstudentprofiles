@@ -10,6 +10,7 @@ import Navigation from "./navigation";
 import Home from "./Home";
 import Profile from "./timeline";
 import Directory from "./directory";
+import Visualization from './components/Visualization';
 
 class App extends Component {
   constructor(props) {
@@ -24,9 +25,9 @@ class App extends Component {
       <Router>
         <Navigation />
         <Route exact path="/" component={ Home } />
-        <Route exact path="/1" component={ Directory } />
-        <Route exact path="/2" component={ Profile } />
+        <Route exact path="/search" component={ Directory } />
         <Route path="/profile/:name" component={Profile}/>
+        <Route exact path="/visualization" component={Visualization} />
       </Router>
       <div id="spacer"></div>
       <footer className="Footer"> © Rewriting the Code</footer>

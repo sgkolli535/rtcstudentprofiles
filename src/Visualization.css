@@ -1,0 +1,93 @@
+.body{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    /* comment out after header is fixed  */
+    margin-top: 0px;
+  } 
+
+  /* comment out after footer is fixed  */
+  .Footer{
+    margin-top: 0px;
+
+  }
+  
+  .screen{
+    width: 1500px;
+    height: 800px;  
+    background: #000000;
+  
+  }
+  
+  .titlebar{
+      background: #000000;
+      height: 130px;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      /* justify-content: space-between; */
+      align-content: center;
+  
+  }
+
+  /* style top text to be correct font, font-wight, color */
+  .text{
+    /* width: 144px; */
+    height: 37px;
+    /* font-family:'Segoe UI'; */
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    margin-top: 15px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+
+  /* comment out after footer is fixed */
+  #spacer {
+    height: 0px;
+}
+
+a{
+  color: dodgerblue;
+
+}
+
+  .bluebutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 238px;
+    height: 49px;
+    background: #FFFFFF;
+    border: 5px solid #0EA9CB;
+    box-sizing: border-box;
+  
+  }
+  
+  .yellowbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 238px;
+    height: 49px;
+    background: #FFFFFF;
+    border: 5px solid #FFC700;
+    box-sizing: border-box;
+  
+  }
+  
+  .buttontext{
+    width: 186px;
+    height: 22px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+  
+  }
+  
