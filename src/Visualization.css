@@ -1,10 +1,9 @@
-.body{
+.vizBody{
     display: flex;
     justify-content: center;
     background-color: black;
-    /* comment out after header is fixed  */
     margin-top: 0px;
-  } 
+  }
 
   /* comment out after footer is fixed  */
   .Footer{

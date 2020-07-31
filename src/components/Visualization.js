@@ -6,7 +6,7 @@ import "../Visualization.css";
 function Visualization(){
     return(
         <div><div className="titlebar"> <div className="text">RTC Member Data</div> </div>
-        <div className="body">
+        <div className="vizBody">
             {/* <div className="headerbox">
                 <a href="/home">  <div className="bluebutton"> <div className="buttontext">Popular High School </div></div> </a>
                 <a href="/home"><div className="yellowbutton"> <div className="buttontext"> HS vs. College States</div></div> </a>
