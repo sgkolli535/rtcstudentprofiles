@@ -32,12 +32,10 @@ h3{
   width: 150px;
 }
 .homepage {
-  height: 70vh;
   text-align: center;
-}
-.title {
-  margin-top: 100px;
-  margin-bottom: 40px;
+  overflow: auto;
+  min-height: calc(100vh - 80px);
+  padding-bottom: 50px;
 }
 
 html, body {
@@ -53,7 +51,7 @@ h2 {
 #option1 {
   float: left;
   width: 200px;
-  height: 200px;
+  height: 100px;
   flex: 50%;
   padding: 10px;
 }
@@ -67,17 +65,18 @@ h2 {
 #option3 {
   float: right;
   width: 200px;
-  height: 200px;
+  height: 100px;
   flex: 50%;
   padding: 10px;
 }
 .options {
   display: flex;
+  padding: 20px;
   width: calc(60% - 10px);
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  height: 200px;
+  margin-top: auto;
+  height: 100%;
 }
 .options a{
   color: #2e1201;
@@ -86,6 +85,40 @@ h2 {
 .options a:hover {
   color: #d9ac8d;
   text-decoration: none;
+}
+.welcome-container-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: calc(80% - 5px);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  padding-top: 50px;
+
+}
+.welcome-container-text p {
+  text-align: left;
+  margin-left: 30px;
+  line-height: 30px;
+}
+.welcome-container-text h1 {
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: none;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.welcome-graphic {
+  float: right;
+  width: 300px;
+  padding: 10px;
+}
+.welcome-graphic .welcome-container-text p{
+  display: inline-block;
+  justify-content: center;
 }
 .App-header {
   background-color: black;
@@ -236,13 +269,12 @@ li {
   border-radius: 5px;
 }
 .Footer {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: gray;
   font-size: 14px;
-  padding-left: 100px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 70px;
+  text-align: center;
+  height: 60px;
+  position: absolute-center;
 }
 
 .autocomplete-items a {
