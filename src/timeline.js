@@ -25,59 +25,102 @@ function Profile({ match }) {
 
 		console.log(member);
 	};
+
+	// putting hs location data into array
+	if(member.cityHS == undefined || member.stateHS == undefined || member.countryHS == undefined){
+		var hs = {
+			city: "Currently unavailable!",
+			state: "",
+			country: "",
+			comma: ""
+		};
+	}
+	else {
+		var hs = {
+			city: member.cityHS,
+			state: member.stateHS,
+			country: member.countryHS,
+			comma: ", "
+		};
+	};
+
+	// putting college location data in array
+	if (member.collegeCity == undefined || member.collegeState == undefined || member.collegeCountry == undefined){
+		var college = {
+			city: "Currently unavailable!",
+			state: "",
+			country: "",
+			comma: ""
+		};
+	}
+	else {
+		var college = {
+			city: member.collegeCity,
+			state: member.collegeState,
+			country: member.collegeCountry,
+			comma: ", "
+		}
+	}
+
+	// collegeGrad check
+	if(member.collegeGrad == "undefined undefined"){
+		var collegeGrad = "(Dates unknown)";
+	}
+	else {
+		var collegeGrad = member.collegeGrad;
+	}
+
 	return (
-    // <div><Navigation /></div>
-		<div className="profiles">
+	<div className="profiles">
       <header className="App-header">
         <h1> {member.name} </h1>
         <div className="email">
-	<h2>Email:</h2>
-          <p>{member.email}</p>
+			<h3>Email:</h3>
+			<p>{member.email}</p>
         </div>
         <div className="based">
-        	<h2>Based In: </h2>
-	<p>{member.hometown}</p>
+        	<h3>Based In: </h3>
+			<p>{member.hometown || "Currently unknown"}</p>
         </div>
         <img src={pic} alt="profile" className="profile"></img>
       </header>
-      <div className="body">
-      <div className="clearfloat"></div>
-      <div className="job">
-      		<h2>Experience</h2>
-      		<ul>
-	<li>{member.prevInternship}</li>
-        	</ul>
-        	<div className="vertical"></div>
-      </div>
-      	<div className="hs">
-      		<h2>High School</h2>
-      		<ul>
-        		<li>{member.hsName}</li>
-        		<li>{member.cityHS}, {member.stateHS}, {member.countryHS}</li>
-				<li>{member.prevCourse}</li>
+      <div className="profBody">
+      	<div className="clearfloat"></div>
 
-        	</ul>
-        	<div className="vertical"></div>
-      	</div>
+		<div className="job">
+			<div className="date3">
+				<p>(Various dates)</p>
+			</div>
+			<h3>Experience</h3>
+				<p>{member.prevInternship || "Currently unavailable!"}</p>
+			<div className="vertical"></div>
+		</div>
+
+		<div className="hs">
+			<h3>High School</h3>
+				<p><b>Name:</b> {member.hsName || "Currently unavailable!"}</p>
+				<p><b>Location:</b> {hs.city}{hs.comma}{hs.state}{hs.comma}{hs.country}</p>
+				<p><b>Previous course(s):</b> {member.prevCourse || "Currently unavailable!"}</p>
+			<div className="vertical"></div>
+		</div>
+
       	<div className="date2">
-      		<p>{member.collegeGrad}</p>
+      		<p>{collegeGrad}</p>
       	</div>
+
       	<div className="clearfloat"></div>
       	<hr></hr>
+
       	<div className="date1">
-      		<p>{member.hsGrad}</p>
-      	</div>
-      	<div className="date3">
-      		<p>Various</p>
+      		<p>{member.hsGrad || "(Dates unknown)"}</p>
       	</div>
       	<div className="college">
-      		<div className="vertical"></div>
-        	<h2>College</h2>
-        	<ul>
-			<li>{member.college}</li>
-			<li>{member.collegeCity}, {member.collegeState}, {member.collegeCountry}</li>
-        	</ul>
+			<div className="vertical"></div>
+			<h3>College</h3>
+			<p><b>Name:</b> {member.college || "Currently unavailable"}</p>
+			<p><b>Location:</b> {college.city}{college.comma}{college.state}{college.comma}{college.country}</p>
         </div>
+
       </div>
       </div>
 		);

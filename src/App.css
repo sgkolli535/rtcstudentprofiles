@@ -5,9 +5,7 @@
 .color-nav {
   background-color: black;
 }
-.links li a {
-  color: #fff;
-}
+
 .App-header {
   border-bottom: 5px solid #0EA9CB;
 }
@@ -84,7 +82,7 @@ h2 {
   margin-right: auto;
   width: 550px;
 }
-.body {
+.profBody {
   margin-top: 50px;
 }
 hr {
@@ -98,9 +96,8 @@ hr {
   margin-left: 81px;
 }
 .date3 {
-  float: right;
-  font-size: 20px;
-  margin-right: 148px;
+  text-align: left;
+  font-size: 18px;
 }
 .date2 {
   width: 200px;
@@ -114,16 +111,30 @@ hr {
   margin-left: 100px;
   margin-bottom: none;
 }
+.hs h3{
+  text-align: left;
+}
+.hs p{
+  text-align: left;
+}
 .job {
   float: right;
   margin-right: 100px;
 }
+.job p{
+  text-align: left;
+}
+.job h3{
+  text-align: left;
+}
 .college {
   margin-left: 665px;
-  /*margin-bottom: 50px;*/
-
-  /*text-align: center;
-  width: 150px;*/
+}
+.college h3{
+  text-align:left;
+}
+.college p{
+  text-align: left;
 }
 /*.interests1 {
   float: left;
@@ -149,9 +160,15 @@ hr {
   float: left;
   padding-left: 300px;
 }
+.email p{
+  font-size: 20px;
+}
 .based {
   float: right;
   padding-right: 300px;
+}
+.based p{
+  font-size: 20px;
 }
 .profile {
   width: 260px;
