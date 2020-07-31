@@ -1,3 +1,15 @@
+h1{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+h3{
+  text-align: center;
+  letter-spacing: 2px;
+}
+
 .profiles {
   /*text-align: center;*/
   height: 100vh;
@@ -18,6 +30,7 @@
 }
 .title {
   margin-top: 100px;
+  margin-bottom: 40px;
 }
 
 html, body {
@@ -35,7 +48,7 @@ h2 {
   width: 200px;
   height: 200px;
   flex: 50%;
-  padding: 20px;
+  padding: 10px;
 }
 
 /*#option2 {
@@ -49,14 +62,14 @@ h2 {
   width: 200px;
   height: 200px;
   flex: 50%;
-  padding: 20px;
+  padding: 10px;
 }
 .options {
   display: flex;
   width: calc(60% - 10px);
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 50px;
   height: 200px;
 }
 .options a{
@@ -103,13 +116,14 @@ hr {
   width: 200px;
   margin-left: 647px;
   font-size: 20px;
-  padding-top: 157px;
+  padding-top: 230px;
   padding-bottom: 0;
 }
 .hs {
   float: left;
   margin-left: 100px;
   margin-bottom: none;
+  max-width: calc(35% - 10px);
 }
 .hs h3{
   text-align: left;
@@ -120,6 +134,7 @@ hr {
 .job {
   float: right;
   margin-right: 100px;
+  max-width: calc(35% - 10px);
 }
 .job p{
   text-align: left;
@@ -129,6 +144,7 @@ hr {
 }
 .college {
   margin-left: 665px;
+  max-width: calc(35% - 10px);
 }
 .college h3{
   text-align:left;
@@ -202,19 +218,19 @@ li {
   text-align: center;
   height: 75vh;
 }
-#directory h1 {
+#directory h2 {
   border: 1px solid black;
-  width: 510px;
+  width: calc(40% - 10px);
   margin-left: auto;
   margin-right: auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  line-height: 50px;
+  padding: 15px;
   border-radius: 5px;
 }
 .Footer {
   background-color: black;
   color: white;
-  font-size: 20px;
+  font-size: 14px;
   padding-left: 100px;
   padding-top: 20px;
   padding-bottom: 20px;

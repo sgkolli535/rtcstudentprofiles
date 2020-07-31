@@ -32,7 +32,7 @@ class App extends Component {
         <Route exact path="/vertical" component = {Timeline} />
       </Router>
       <div id="spacer"></div>
-      <footer className="Footer"> © Rewriting the Code</footer>
+      <footer className="Footer"> © Rewriting the Code ⚡️ Sumi, Lily, Melanie, and Shreya 2020</footer>
     </div>
   );
 }

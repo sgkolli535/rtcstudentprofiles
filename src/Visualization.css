@@ -1,7 +1,7 @@
 .vizBody{
     display: flex;
     justify-content: center;
-    background-color: black;
+    background-color: white;
     margin-top: 0px;
   }
 
@@ -15,32 +15,32 @@
     width: calc(80% - 10px);
     height: calc(75%-10px);  
     background: #fff;
+    padding-bottom: 50px;
 
   }
   
   .titlebar{
-      background: #000000;
+      background: #fff;
       height: 130px;
       width: 100vw;
       display: flex;
       justify-content: center;
       /* justify-content: space-between; */
       align-content: center;
+      padding-top: 50px;
   
   }
 
   /* style top text to be correct font, font-wight, color */
   .text{
-    /* width: 144px; */
     height: 37px;
-    /* font-family:'Segoe UI'; */
     font-style: normal;
     font-weight: bold;
     font-size: 50px;
     margin-top: 15px;
     line-height: 37px;
     text-align: center;
-    color: #FFFFFF;
+    color: #000;
   }
   
 

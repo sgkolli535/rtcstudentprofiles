@@ -1,15 +1,4 @@
 /* this is for vertical timeline */
-
-h1{
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-h3{
-  text-align: center;
-  letter-spacing: 2px;
-}
 .timeline-container{
   display: flex;
   flex-direction: column;

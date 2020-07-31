@@ -73,7 +73,7 @@ callAPI() {
 	render() {
 	return(
 		<div id="directory">
-		<h1>Search for RTC Member Profiles</h1>
+		<h2>Search for RTC Member Profiles 🔍</h2>
 		<Form inline id="search" autocomplete="off">
       		<FormControl type="text" placeholder="RTC Member" id="bar" size="lg" value={this.props.inputValue} onChange={(e) => this.memberFilterOnChange(e)}/>
       		<Button onClick={() => this.handleClick()}variant="outline-dark" size="lg" id="button">Search</Button>{' '}
