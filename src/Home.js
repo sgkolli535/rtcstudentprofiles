@@ -7,8 +7,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navigation from "./navigation.js";
 import graphic from "./home_graphic.jpg";
-import lightbulb from "./idea.jpg";
-import InputExampleInput from './suggestion.js';
 
 function Home() {
 	return(
