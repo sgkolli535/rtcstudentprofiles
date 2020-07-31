@@ -73,7 +73,7 @@ function Profile({ match }) {
 	return (
 	<div className="profiles">
       <header className="App-header">
-        <h1> {member.name} </h1>
+        <h1>{member.name}</h1>
         <div className="email">
 			<h3>Email:</h3>
 			<p>{member.email}</p>
