@@ -5,6 +5,9 @@
 .color-nav {
   background-color: black;
 }
+.links li a {
+  color: #fff;
+}
 .App-header {
   border-bottom: 5px solid #0EA9CB;
 }
