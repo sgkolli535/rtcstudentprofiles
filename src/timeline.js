@@ -109,7 +109,7 @@ function Profile({ match }) {
       	</div>
 
       	<div className="clearfloat"></div>
-      	<hr></hr>
+		<hr></hr>
 
       	<div className="date1">
       		<p>{member.hsGrad || "(Dates unknown)"}</p>

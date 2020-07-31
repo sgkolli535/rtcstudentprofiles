@@ -12,13 +12,14 @@ h3{
 
 .profiles {
   text-align: center;
-  height: 100vh;
+  
 }
 .color-nav {
   background-color: #fff;
+  border-bottom: 1px solid #ccb29f;
 }
 .App-header {
-  border-bottom: 5px solid #a68676;
+  border-bottom: 5px solid #155e61;
   text-align: center;
 
 }
@@ -196,8 +197,11 @@ hr {
   text-align: left;
 }
 .college {
-  margin-left: 665px;
+  margin-left: auto;
+  margin-right: calc(25% - 100px);
+  margin-bottom: calc(25%);
   max-width: calc(35% - 10px);
+
 }
 .college h3{
   text-align:left;
@@ -240,9 +244,9 @@ hr {
   font-size: 20px;
 }
 .profile {
-  width: 200px;
-  height: 200px;
-  border: 4px solid #a68676;
+  width: 220px;
+  height: 220px;
+  border: 4px solid #f0b618;
   background-color: #fff;
   border-style: solid;
   border-width: 5px;
