@@ -7,6 +7,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navigation from "./navigation.js";
 import graphic from "./home_graphic.jpg";
+import lightbulb from "./idea.jpg";
+import InputExampleInput from './suggestion.js';
 
 function Home() {
 	return(
@@ -22,14 +24,15 @@ function Home() {
            These visualizations were made using Tableau dashboards, and are live-updated every day with data from the Airtable. 
            Happy discovering! </p>
            <hr></hr>
-           <h1>Ready to start? 👀</h1>
         </div>
+
+        <div className = "ready"><h1>Ready to start? 👀</h1></div>
 
         <div className="options">
           <div id="option1">
           <h3><a href='/search'>Student Profiles</a> 🔍</h3>
             <hr></hr>
-            <p>View the profiles of current RTC students, including their high schools, colleges, and jobs.</p>
+            <p>View the profiles of current RTC students, including their emails, high schools, colleges, and past work experiences.</p>
           </div>
           
           <div id="option3">
@@ -37,6 +40,11 @@ function Home() {
             <hr></hr>
             <p>View visualizations of the top 50 high schools, top 50 colleges, high school locations, hometowns vs. colleges, and more.</p>
           </div>
+        </div>
+        
+        <div className = "ready"><hr></hr>
+          <h1>Have suggestions? Let us know!</h1>
+          <p>Feedback form coming soon! ⚡️</p>
         </div>
       </div>
 		);
