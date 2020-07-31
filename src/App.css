@@ -18,34 +18,53 @@
 .title {
   margin-top: 100px;
 }
-#option1 {
-  float: left;
-  width: 300px;
-  height: 200px;
-  /*padding: 20px;*/
-}
+
 html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Helvetica', sans-serif;
 }
 
-#option2 {
+h2 {
+  font-weight: bold;
+}
+
+#option1 {
+  float: left;
+  width: 200px;
+  height: 200px;
+  flex: 50%;
+  padding: 20px;
+}
+
+/*#option2 {
   float: left;
   width: 325px;
   height: 200px;
   margin-left: 47px;
-}
+}*/
 #option3 {
   float: right;
-  width: 300px;
+  width: 200px;
   height: 200px;
+  flex: 50%;
+  padding: 20px;
 }
 .options {
-  width: 1025px;
+  display: flex;
+  width: calc(60% - 10px);
   margin-left: auto;
   margin-right: auto;
-  margin-top: 180px;
+  margin-top: 100px;
   height: 200px;
+}
+.options a{
+  color: #2e1201;
+  text-decoration: none;
+}
+.options a:hover {
+  color: #d9ac8d;
+  text-decoration: none;
 }
 .App-header {
   background-color: black;
@@ -193,4 +212,3 @@ li {
   /*when hovering an item:*/
   background-color: #e9e9e9;
 }
-

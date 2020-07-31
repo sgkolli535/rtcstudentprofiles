@@ -11,16 +11,19 @@ import Home from "./Home";
 import Profile from "./timeline";
 import Directory from "./directory";
 import { BreakpointProvider, Breakpoint } from 'react-socks';
+import Timeline from './components/Timeline';
 
 function App() {
   return (
     <BreakpointProvider>
     <div className="App">
+      
       <Router>
         <Navigation />
         <Route exact path="/" component={ Home } />
         <Route exact path="/1" component={ Directory } />
         <Route exact path="/2" component={ Profile } />
+        <Route exact path = "/3" component= {Timeline} />
       </Router>
       <div id="spacer"></div>
       <Breakpoint large up>

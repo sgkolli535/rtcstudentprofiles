@@ -19,6 +19,7 @@ function Navigation() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/1">Student Profiles</Nav.Link>
             <Nav.Link href="/2">Visualizations</Nav.Link>
+            <Nav.Link href="/3">TimelineVertical</Nav.Link>
           </Nav>
           </Navbar.Collapse>
         </Navbar>

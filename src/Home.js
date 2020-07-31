@@ -6,33 +6,31 @@ import screen_shot from './screen_shot.png';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navigation from "./navigation.js";
-
 function Home() {
 	return(
 		<div className="homepage">
         <div className="clearfloat"></div>
         <h1 className="title">Discover RTC</h1>
-        <p>A platform to explore the composition of RTC members</p>
+        <p>A platform to explore the composition of RTC members.</p>
         <div className="options">
-          <a href='/search'>
+          
           <div id="option1">
-            <h2>Student Profiles</h2>
+          <h3><a href='/search'>Student Profiles</a> 🔍</h3>
             <hr></hr>
-            <p>View the profiles of current RTC students, including their high schools, colleges, and jobs</p>
+            <p>View the profiles of current RTC students, including their high schools, colleges, and jobs.</p>
           </div>
-          </a>
+          
           {/* <div id="option2">
             <h2>International Students</h2>
             <hr></hr>
             <p>View the profiles of international students, including countries of origin, first-generation, universities, sponsorship, and jobs</p>
           </div> */}
-          <a href='/visualization'>
+          
           <div id="option3">
-            <h2>Visualizations</h2>
+          <h3><a href='/visualization'>Visualizations</a> 📊</h3>
             <hr></hr>
-            <p>View visualizations of most popular high schools, high school and college states, and full-time locations</p>
+            <p>View visualizations of the top 50 high schools, top 50 colleges, high school locations, hometowns vs. colleges, and more.</p>
           </div>
-          </a>
         </div>
       </div>
 		);

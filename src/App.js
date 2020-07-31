@@ -11,6 +11,7 @@ import Home from "./Home";
 import Profile from "./timeline";
 import Directory from "./directory";
 import Visualization from './components/Visualization';
+import Timeline from './components/Timeline';
 
 class App extends Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class App extends Component {
         <Route exact path="/search" component={ Directory } />
         <Route path="/profile/:name" component={Profile}/>
         <Route exact path="/visualization" component={Visualization} />
+        <Route exact path="/vertical" component = {Timeline} />
       </Router>
       <div id="spacer"></div>
       <footer className="Footer"> © Rewriting the Code</footer>
