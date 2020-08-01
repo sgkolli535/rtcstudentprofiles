@@ -179,35 +179,23 @@ hr {
   margin-bottom: none;
   max-width: calc(35% - 10px);
 }
-.hs h3{
+.profiles h3{
   text-align: left;
 }
-.hs p{
+.profiles p{
   text-align: left;
 }
 .job {
   float: right;
   margin-right: 100px;
   max-width: calc(35% - 10px);
-}
-.job p{
-  text-align: left;
-}
-.job h3{
-  text-align: left;
+  margin-top: calc(5%);
 }
 .college {
   margin-left: auto;
   margin-right: calc(25% - 100px);
-  margin-bottom: calc(25%);
   max-width: calc(35% - 10px);
 
-}
-.college h3{
-  text-align:left;
-}
-.college p{
-  text-align: left;
 }
 /*.interests1 {
   float: left;
@@ -231,14 +219,16 @@ hr {
 }*/
 .email {
   float: left;
-  margin-left: 300px;
+  margin-left: calc(20%);
+  margin-top: calc(3.5%);
 }
 .email p{
   font-size: 20px;
 }
 .based {
   float: right;
-  margin-right: 300px;
+  margin-right: calc(20%);
+  margin-top: calc(3.5%);
 }
 .based p{
   font-size: 20px;

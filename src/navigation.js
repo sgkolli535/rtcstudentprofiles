@@ -18,8 +18,8 @@ function Navigation() {
           <Nav className="links">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/search">Search Members</Nav.Link>
-            <Nav.Link href="/visualization">Data Visualization</Nav.Link>
-            <Nav.Link href="/vertical">Vertical Option 2</Nav.Link>
+            <Nav.Link href="/visualization">Data Visualizations</Nav.Link>
+            <Nav.Link href="/vertical">Vertical Example</Nav.Link>
 
           </Nav>
           </Navbar.Collapse>

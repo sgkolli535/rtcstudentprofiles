@@ -80,7 +80,7 @@ function Profile({ match }) {
         </div>
         <div className="based">
         	<h3>Based In: </h3>
-			<p>{member.hometown || "Currently unknown"}</p>
+			<p>{member.hometown || "Currently unavailable!"}</p>
         </div>
         <img src={pic} alt="profile" className="profile"></img>
       </header>
@@ -88,35 +88,26 @@ function Profile({ match }) {
       	<div className="clearfloat"></div>
 
 		<div className="job">
-			<div className="date3">
+			<h3>Experience ⚡️</h3>
 				<p>(Various dates)</p>
-			</div>
-			<h3>Experience</h3>
-				<p>{member.prevInternship || "Currently unavailable!"}</p>
+				<p><b>Previously worked at: </b>{member.prevInternship || "Currently unavailable!"}</p>
 			<div className="vertical"></div>
 		</div>
 
 		<div className="hs">
-			<h3>High School</h3>
+			<h3>High School 🚌</h3>
+				<span className = "date"><p>{member.hsGrad || "(Dates unknown)"}</p></span>
 				<p><b>Name:</b> {member.hsName || "Currently unavailable!"}</p>
 				<p><b>Location:</b> {hs.city}{hs.comma}{hs.state}{hs.comma}{hs.country}</p>
 				<p><b>Previous course(s):</b> {member.prevCourse || "Currently unavailable!"}</p>
 			<div className="vertical"></div>
 		</div>
-
-      	<div className="date2">
-      		<p>{collegeGrad}</p>
-      	</div>
-
       	<div className="clearfloat"></div>
 		<hr></hr>
-
-      	<div className="date1">
-      		<p>{member.hsGrad || "(Dates unknown)"}</p>
-      	</div>
       	<div className="college">
 			<div className="vertical"></div>
-			<h3>College</h3>
+			<h3>College 🎓</h3>
+			<p>{collegeGrad}</p>
 			<p><b>Name:</b> {member.college || "Currently unavailable"}</p>
 			<p><b>Location:</b> {college.city}{college.comma}{college.state}{college.comma}{college.country}</p>
         </div>
