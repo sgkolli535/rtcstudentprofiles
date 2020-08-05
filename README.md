@@ -10,8 +10,8 @@ To run this project, clone this file and run 'npm install' in both the API folde
 
 You can view our wireframe [here](https://www.figma.com/file/Op2Wwp9qVUBBiiWy7eFM6k/Timeline?node-id=0%3A1).
 
-Technologies used:
-Tableau   
+Technologies used:  
+Tableau and Tableau Public  
 [React](https://github.com/facebook/create-react-app)  
 Express.js  
 Bootstrap  
