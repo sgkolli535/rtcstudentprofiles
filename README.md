@@ -3,6 +3,8 @@
 Team 5: Student Profiles
 
 Creators: Shreya Datta (front-end), Lily Lou (back-end), Melanie Chio (data pipeline and visualizations), Sumi Kolli (front-end)
+[![Demo of Project](http://g.recordit.co/YwTd0VQ8zq.gif)](http://g.recordit.co/YwTd0VQ8zq.gif)
+
 
 This project was created as part of Women of Rewriting the Code's Rewrite Your Summer program. This project visualizes RTC membership data using Tableau and includes a searchable database for individualized profiles of RTC members. 
 
